@@ -22,7 +22,7 @@ class Inicio extends Controllers{
        $data['categoriatres'] = $this->getCategoriaTresT(CATEGORIA_TRES);
     /*    $data['productos'] = $this->selectProductos(); */
        $data['productos'] = $this->getProductosCategoriaInicio(1);
-       $data['productos_desi'] = $this->getProductosCategoriaInicio(3);
+       $data['paquetes-internacionales'] = $this->getProductosCategoriaInicio(3);
       
        $this->views->getView($this,"inicio",$data);
     }

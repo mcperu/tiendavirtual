@@ -1,16 +1,17 @@
 <?php
 
 $arrModulo = $data['slider'];
-/* dep( $arrSlider); */
+
 
 $arrBane = $data['banner'];
 $arrCate = $data['categoria'];
 
 $arrCateTres = $data['categoriatres'];
 $arrProductos = $data['productos'];
+//dep($arrProductos);
 
-$arrProductosDesi = $data['productos_desi'];
-
+$arrPackInter = $data['paquetes-internacionales'];
+// dep($arrPackInter);
 headerTienda($data); 
 
 
@@ -60,140 +61,202 @@ headerTienda($data);
     <!-- *************************  /portada  ************************* -->
     <!-- ************************************************************** -->
 
-
- <div class="container-fluid fondoBackground paddinbBienvenida">
-	<div class="row">
-		<div class="col-md-12 contenidoBienvenida">
-			<h3 class="text-center">Customizable Designs</h3>
-			<p class=" text-center">We offer personalized one-of-a-kind designs, in out best <br/>
-			selling styles, for your business</p>
-		</div>
-	</div>
-
-	<div class="flex-contenedor">
-		<div class="flex-items">
-			<img src="Assets/tienda/img/texas.webp" alt="">
-		</div>
-		<div class="flex-items">
-			<img src="Assets/tienda/img/los-angeles.webp" alt="">
-		</div>
-		<div class="flex-items">
-			<img src="Assets/tienda/img/new-mexico.webp" alt="">
-		</div>
-		<div class="flex-items">
-			<img src="Assets/tienda/img/seattle.webp" alt="">
-		</div>
-		<div class="flex-items">
-			<img src="Assets/tienda/img/texas-2.webp" alt="">
-		</div>
-	</div>
-	 
-</div>
-<!-- Bienvenida -->
-<div class="espacio"></div>
-
-<div class="container">
-	<div class="row">
-
-		<div class="col-md-3 ">
-		 	<h3 class="categorycss">Shop by Category</h3>
-			 <ul id="accordion">  
-					
-					<li>  <h3>ZIP BAGS MIX COLORS</h3> 
-							<div>
-								<a href="#"><h4>BAGS ONE</h4></a>
-							</div>
-					</li>  
-						<li>  <h3>BACK PACKS</h3>  
-						
-						</li>  
-
-						<li>  <h3>ZIP BAGS MIX COLORS</h3>  
-						</li>
-  		</ul>  
-			<!-- /acordeon -->
-		</div>
-		<div class="col-md-9 ">
-		<h3 class="bestsellcss">Bestsellers</h3>
-
-			<div class="  divProductos">
-						<div class=" ">
-							<h2 class="text-center"><?= $arrProductos[0]['nombrecategoriatres']?></h2>
-							<h3 class="text-center"> <?= $arrProductos[0]['nombrecategoriatres']?></h3>
-						</div>
-						<br>
-					<div class="" id="inventory">
-						<div class="row">
-							<?php
-
-							for($p=0; $p < count($arrProductos); $p++){
-
-								if(count($arrProductos[$p]['images']) > 0 ){
-									$portada = $arrProductos[$p]['images'][0]['url_image'];
-								}else{
-									$portada = media().'/images/uploads/product.png';
-								}
-							?>
-							<div class="col-md-3 productoOrganico">
-								<div class="card">
-									<div class="ribbon"><span>NEW</span></div>
-									<div class="flex-items">
-										<a href="<?= $portada ?>?w=700" data-lightbox="<?= $arrProductos[$p]['nombre'] ?>" data-title="<?= $arrProductos[$p]['nombre'] ?>"><img class="img-fluid"  width="100%" src="<?= $portada ?>?w=400"  alt="<?= $arrProductos[$p]['nombre'] ?>" ></a>
-									</div>
-										<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><h3 class="titulo_producto" ><?= $arrProductos[$p]['nombre'] ?></h3></a>
-										 
-										<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><button class="btn view-btn">Buy Now</button></a>
-								</div>
-							</div>
-						<?php
-						}
-						?>
-						</div>
-					</div>
-				</div>
-				<!-- Categorias -->
-
-		</div>
-	</div>
-</div>
-
-
-
-<div class="container divProductos">
-		<div class="row">
-			<h2 class="text-center"><?= $arrProductosDesi[0]['nombrecategoriatres']?></h2>
-			<h3 class="text-center"> <?= $arrProductosDesi[0]['nombrecategoriatres']?></h3>
-		</div>
-		<br>
-	<div class="container-fluid" id="inventory">
-		<div class="row">
-            <?php
-
-            for($p=0; $p < count($arrProductosDesi); $p++){
-
-                if(count($arrProductosDesi[$p]['images']) > 0 ){
-                    $portada = $arrProductosDesi[$p]['images'][0]['url_image'];
-                }else{
-                    $portada = media().'/images/uploads/product.png';
-                }
-            ?>
-			<div class="col-md-3 productoOrganico">
-				<div class="card">
-            		<div class="ribbon"><span>New</span></div>
-					<div class="flex-items">
-						<a href="<?= $portada ?>?w=700" data-lightbox="<?= $arrProductosDesi[$p]['nombre'] ?>" data-title="<?= $arrProductosDesi[$p]['nombre'] ?>"><img class="img-fluid"  width="100%" src="<?= $portada ?>?w=400"  alt="<?= $arrProductosDesi[$p]['nombre'] ?>" ></a>
-					</div>
-						<a href="<?= base_url().'/tienda/producto/'.$arrProductosDesi[$p]['ruta']; ?>"><h3 class="titulo_producto" ><?= $arrProductosDesi[$p]['nombre'] ?></h3></a>
-						 
-						<a href="<?= base_url().'/tienda/producto/'.$arrProductosDesi[$p]['ruta']; ?>"><button class="btn view-btn">Buy Now</button></a>
-				</div>
-			</div>
+	<!-- ************************************************************** -->
+    <!-- *************************  paquetes turisticos Nacionales  ************************* -->
+    <!-- ************************************************************** -->    
+	<section class="staticData">
+    <!-- titulo -->
+    <h2 class="text-success">Paquetes Turisticos Lima</h2>
+    <p>Siempre podrás contar con nosotros
+        para conocer la belleza y grandeza del Perú
+        con seguridad y confianza. </p>
+    <p class="text-warning-emphasis text-center">NATURALEZA Y GASTRONOMIA</p>
+    <!-- /titulo -->
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row">
 		<?php
-		}
+
+			for($p=0; $p < count($arrProductos); $p++){
+
+				if(count($arrProductos[$p]['images']) > 0 ){
+					$portada = $arrProductos[$p]['images'][0]['url_image'];
+				}else{
+					$portada = media().'/images/uploads/product.png';
+			}
+
 		?>
-		</div>
-	</div>
-</div>
+            <article class="col-md-4">
+                <div class="conProd">
+                   <a class="text-d-none" href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"> <img src="<?= $portada ?>" alt="<?= $arrProductos[$p]['nombre'] ?>"  title="Viaja a Tarapoto"></a>
+                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><h3>TARAPOTO</h3></a></div>
+                    <div class="conTit"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><p><?= $arrProductos[$p]['nombre'] ?></p></a></div>
+                </div>
+                <div class="descripcion">
+                    <a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><h3><?= $arrProductos[$p]['nombre'] ?></h3></a>
+                    <p><?= $arrProductos[$p]['resumen'] ?>
+                    </p>
+                    <div class="precio">Precio: <span class="sym">S/</span><span class="price"><?= $arrProductos[$p]['preciosolesigv'] ?></span></div>
+                    <a class="btnBuy btn btn-warning" href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>">VER MAS</a>
+                </div>
+            </article>
+		<?php
+			}
+		?>
+             
+        </div>
+    </div>
+</section>
+
+	<!-- ************************************************************** -->
+    <!-- ************************* /paquetes turisticos Nacionales ************************* -->
+    <!-- ************************************************************** -->    
+
+
+<section class="callToAction">
+     <h2>Reserva y busca tu viaje ya!</h2>
+</section>
+<section class="callToAction4">
+    <h3> Paquetes Turisticos </h3>
+</section>
+<section class="callToAction3">
+    
+    <div class="divImageText1">
+        <div class="dIleft"></div>
+        <div class="dIright"></div>
+    </div>
+    <div class="divImageText2">
+        <div class="dI2left">
+          
+        </div>
+        <div class="dI2right"></div>
+    </div>
+</section>
+	<!-- ************************************************************** -->
+    <!-- *************************  paquetes turisticos Internacionales  ************************* -->
+    <!-- ************************************************************** -->    
+	<section class="staticData">
+    <!-- titulo -->
+    <h2 class="text-success">Paquetes Turisticos Internacionales</h2>
+    <p>Siempre podrás contar con nosotros
+        para conocer la belleza y grandeza del mundo
+        con seguridad y confianza. </p>
+    <p class="text-warning-emphasis text-center">NATURALEZA</p>
+    <!-- /titulo -->
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row">
+		<?php
+
+			for($p=0; $p < count($arrPackInter); $p++){
+
+				if(count($arrPackInter[$p]['images']) > 0 ){
+					$portada = $arrPackInter[$p]['images'][0]['url_image'];
+				}else{
+					$portada = media().'/images/uploads/product.png';
+			}
+
+		?>
+            <article class="col-md-4">
+                <div class="conProd">
+                   <a class="text-d-none" href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"> <img src="<?= $portada ?>" alt="<?= $arrPackInter[$p]['nombre'] ?>"  title="Viaja a Tarapoto"></a>
+                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><h3>TARAPOTO</h3></a></div>
+                    <div class="conTit"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><p><?= $arrPackInter[$p]['nombre'] ?></p></a></div>
+                </div>
+                <div class="descripcion">
+                    <a href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><h3><?= $arrPackInter[$p]['nombre'] ?></h3></a>
+                    <p><?= $arrPackInter[$p]['resumen'] ?>
+                    </p>
+                    <div class="precio">Precio: <span class="sym">S/</span><span class="price"><?= $arrPackInter[$p]['preciosolesigv'] ?></span></div>
+                    <a class="btnBuy btn btn-warning" href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>">VER MAS</a>
+                </div>
+            </article>
+		<?php
+			}
+		?>
+             
+        </div>
+    </div>
+</section>
+
+	<!-- ************************************************************** -->
+    <!-- ************************* /paquetes turisticos Internacionales ************************* -->
+    <!-- ************************************************************** -->  
+
+	<!-- ************************************************************** -->
+    <!-- ************************* Opiniones ************************* -->
+    <!-- ************************************************************** --> 
+
+	<!-- <section class="reviews">
+    <div class="title">
+        <div class="espacio"></div>
+        <h3 class="title2">Opiniones de nuestros clientes</h3>
+    </div>
+    <div class="rbox">
+        <div class="rbLeft">
+            <span class="" id="img1">
+                <img src="<?= media(); ?>/tienda/img/rev1.png" alt="">
+                <span>Juan Garcia</span>
+            </span>
+            <span class="hidden" id="img2">
+                <img src="img/rev2.jpg" alt="">
+                <span >Carla Perez</span>
+            </span>
+        </div>
+        <div class="rbRight">
+            <div class="star">
+                <ul class="linksocial2">
+                    <li><a href="#"><i class="fa fa-star " aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star " aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star " aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star " aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star " aria-hidden="true"></i></a></li>
+                   
+                    
+                </ul>
+            </div>
+            <div class="text" id="text1">
+                <p>Mi viaje por el río Amazonas con la 
+                    empresa Arapaima Expeditions fue una
+                    experiencia inolvidable. Tuve la 
+                    oportunidad de ver la increíble 
+                    fauna y flora del Amazonas y visitar
+                    algunas de las comunidades indígenas
+                    locales. La empresa fue muy respetuosa con el medio ambiente y las comunidades indígenas, y siempre se aseguraron de que todo estuviera  en orden para garantizar nuestra seguridad y comodidad. 
+                    Sin duda recomendaría este viaje a 
+                    cualquiera interesado en explorar 
+                    el Amazonas Peruano.</p>
+            </div>
+            <div class="text hidden" id="text2">
+                <p>Los recomiendo!. Arapaima fue una experiencia inolvidable, los mejores.</p>
+            </div>
+            <div class="text hidden" id="text3">
+                <p>Mi viaje por el río Amazonas con la 
+                    empresa Arapaima Expeditions fue una
+                    experiencia inolvidable. Tuve la 
+                    oportunidad de ver la increíble 
+                    fauna y flora del Amazonas y visitar
+                    algunas de las comunidades indígenas
+                    locales. La empresa fue muy respetuosa con el medio ambiente y las comunidades indígenas, y siempre se aseguraron de que todo estuviera  en orden para garantizar nuestra seguridad y comodidad. 
+                    Sin duda recomendaría este viaje a 
+                    cualquiera interesado en explorar 
+                    el Amazonas Peruano.</p>
+            </div>
+            <div class="bullets">
+                <ul class="linksocial3">
+                    <i onclick="carrouselRev(1)" id="c_btn1" class="fa fa-circle" aria-hidden="true"></i>
+                    <i onclick="carrouselRev(2)" id="c_btn2" class="fa fa-circle-o" aria-hidden="true"></i>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+
+	<!-- ************************************************************** -->
+    <!-- ************************* /Opiniones ************************* -->
+    <!-- ************************************************************** --> 
+
 <!-- /Categorias -->
 
 <!-- <div class="container">

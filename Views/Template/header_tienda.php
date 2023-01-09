@@ -31,6 +31,8 @@
 	<!-- /Yoast Seo-->
 
     <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.css.map">
 <!--  Iconos -->
 
 <!-- / Iconos -->
@@ -82,8 +84,9 @@
             <div class="header-mb">
 				<a href="<?= base_url(); ?>"><img class="logo-mb" src="<?= media(); ?>/tienda/img/logo-small-white.png" alt="<?= NOMBRE_EMPRESA ?>" title="<?= NOMBRE_EMPRESA ?>"></a>
                 
-                <i id="hamburguer" class="bi bi-list"></i>
-                <i id="close"  class="hidden bi bi-x"></i>
+
+                <i id="hamburguer" class="fa fa-bars" aria-hidden="true"></i>
+                <i  id="close" class="hidden fa fa-times" aria-hidden="true"></i>
             </div>
             <div class="body-mb">
 				<nav>

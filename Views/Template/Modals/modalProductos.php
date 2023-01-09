@@ -57,7 +57,7 @@
                             <label class="control-label">Precio Soles <span class="required">*</span></label>
                             <input class="form-control" id="txtPrecioSoles" name="txtPrecioSoles" type="text" value="1" required="">
                         </div>
-                        <div class="form-group col-md-6 d-none">
+                        <div class="form-group col-md-6">
                             <label class="control-label">Precio Soles IGV <span class="required">*</span></label>
                             <input class="form-control" id="txtPrecioSolesIgv" name="txtPrecioSolesIgv" type="text" value="1" required="">
                         </div>
