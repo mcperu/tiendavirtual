@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#009688">
     <link rel="shortcut icon" href="<?= media();?>/images/favicon.ico" type="image/x-icon">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/main.css">
-    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/administrador/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/administrador/style.css">
     
     <title><?= $data['page_tag']; ?></title>
   </head>

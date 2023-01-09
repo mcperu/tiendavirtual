@@ -30,9 +30,8 @@
 	
 	<!-- /Yoast Seo-->
 
+    <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css">
 <!--  Iconos -->
- 
-<link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css">
 
 <!-- / Iconos -->
  
@@ -57,8 +56,8 @@
                 <div class="col-md-9">
                     
                         <ul class="social">
-                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51988552844&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="bi bi-whatsapp"></i> (+51) 988 552 844</a></li>
-                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51983533384&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="bi bi-whatsapp"></i> (+51) 983 533 384</a></li>
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51988552844&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="fa fa-whatsapp " aria-hidden="true"></i> (+51) 988 552 844</a></li>
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51983533384&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="fa fa-whatsapp " aria-hidden="true"></i> (+51) 983 533 384</a></li>
                         </ul>
                     <nav>
                     <ul class="menu ">

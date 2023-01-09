@@ -54,75 +54,18 @@ Unit A 103, Phoenix AZ 85027</a></li>
 	 
 <!-- /footer -->
 
-		<div class="social hidden-xs">
-			<ul>
-                 <li class="ocultarobjmovil" >
-					 <a href="https://api.whatsapp.com/send?phone=195138333868&amp;text=Hi%20Can%20I%20have%20more%20information?" target="_blank" class="icon-whatsapp">
-					 <img src="<?= media(); ?>/tienda/img/whatsapp-logo.png" width="60px"></a></li>
-                <li class="ocultarobjmovil">
-					<a href="<?= INSTAGRAM ?>" target="_blank" class="icon-twitter"><img src="<?= media(); ?>/tienda/img/twitter-logo.png" width="60px"></a></li>
-				<li>
-					<a href="<?= TIKTOK ?>" target="_blank" class="icon-tiktok"><img src="<?= media(); ?>/tienda/img/tiktok.jpg" width="60px"></a></li>
-                <li>
-					<a href="<?= YOUTUBE ?>" target="_blank" class="icon-youtube"><img src="<?= media(); ?>/tienda/img/youtube-logo.JPG" width="60px"></a></li>
-                <li>
-					<a href="<?= FACEBOOK ?>" target="_blank" class="icon-facebook"><img src="<?= media(); ?>/tienda/img/face-logo.JPG" width="60px"></a></li>
-            </ul>
-        </div>
 
 
 <script src="<?= media(); ?>/tienda/js/lightbox-plus-jquery.min.js"></script>
 <script src="<?= media(); ?>/tienda/js/jquery.min.1.9.1.js"></script>
 
 <script type="text/javascript">
-var ww = document.body.clientWidth;
 
 $(document).ready(function() {
-    $(".nav li a").each(function() {
-    	if ($(this).next().length > 0) {
-			$(this).addClass("parent");
-		};
-	})
-	
-	$(".toggleMenu").click(function(e) {
-		e.preventDefault();
-		$(this).toggleClass("active");
-		$(".nav").toggle();
-	});
-	adjustMenu();
+
 })
 
-$(window).bind('resize orientationchange', function() {
-	ww = document.body.clientWidth;
-	adjustMenu();
-});
 
-var adjustMenu = function() {
-	if (ww < 768) {
-		$(".toggleMenu").css("display", "inline-block");
-		if (!$(".toggleMenu").hasClass("active")) {
-			$(".nav").hide();
-		} else {
-			$(".nav").show();
-		}
-		$(".nav li").unbind('mouseenter mouseleave');
-		$(".nav li a.parent").unbind('click').bind('click', function(e) {
-			// must be attached to anchor element to prevent bubbling
-			e.preventDefault();
-			$(this).parent("li").toggleClass("hover");
-		});
-	} 
-	else if (ww >= 768) {
-		$(".toggleMenu").css("display", "none");
-		$(".nav").show();
-		$(".nav li").removeClass("hover");
-		$(".nav li a").unbind('click');
-		$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
-		 	// must be attached to li so that mouseleave is not triggered when hover over submenu
-		 	$(this).toggleClass('hover');
-		});
-	}
-}
 
 
 
@@ -132,6 +75,8 @@ var adjustMenu = function() {
 <script src="<?= media(); ?>/tienda/js/jquery.min.js"></script>
 
 <script src="<?= media(); ?>/tienda/js/bootstrap.min.js"></script>
+<script src="<?= media(); ?>/tienda/js/general.js"></script>
+<script src="<?= media(); ?>/tienda/js/script.js"></script>
 <script src="<?= media(); ?>/tienda/js/validacionFormulario.js"></script>
 
 
@@ -141,11 +86,6 @@ var adjustMenu = function() {
 
   <script src="https://kit.fontawesome.com/e2ce590873.js" crossorigin="anonymous"></script>
  
- <script>
-	 $(function() {  
-    $( "#accordion" ).accordion();  
-  });  
- </script>
 
 </body>
 </html>
