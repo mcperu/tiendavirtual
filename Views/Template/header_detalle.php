@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
  <head>
 	<meta charset="UTF-8">
-	<title><?= NOMBRE_EMPRESA ?> &#8211; We offer personalized one-of-a-kind designs, in our bestselling styles, for your business. </title>
+	<title><?= NOMBRE_EMPRESA ?> &#8211; <?= T_SEO ?></title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	
 
-	<link rel="shortcut icon" href="<?= media();?>/images/favicon.ico" type="image/x-icon">
-
+	<link rel="shortcut icon" href="<?= media();?>/images/favicon2.ico" type="image/x-icon">
 	<meta name="author" content="McKenneth Flores">
-    <meta name="msapplication-TileColor" content="#f3e1d7">
-    <meta name="theme-color" content="#f3e1d7">
-
+    <meta name="msapplication-TileColor" content="#47A895">
+    <meta name="theme-color" content="#47A895">
 	<!--Yoast Seo--> 
-	
-	<meta name="description" content="We offer personalized one-of-a-kind designs, in our bestselling styles, for your business."/>
+	<meta name="description" content="<?= D_SEO ?>"/>
 	<!-- Facebook Tags -->
 	<meta property="og:locale" content="es_PE" />	
 	<meta property="fb:admins" content="1694154767535867" />
 	<meta property="fb:page_id" content="1694154767535867" />
-	<meta property="og:title" itemprop="name" content="We offer personalized one-of-a-kind designs, in our bestselling styles, for your business." />
-	<meta property="og:description" content="We offer personalized one-of-a-kind designs, in our bestselling styles, for your business." />
+	<meta property="og:title" itemprop="name" content="<?= D_SEO ?>" />
+	<meta property="og:description" content="<?= D_SEO ?>" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="<?= NOMBRE_EMPRESA ?> | We offer personalized one-of-a-kind designs, in our bestselling styles, for your business." />
+	<meta property="og:site_name" content="<?= NOMBRE_EMPRESA ?> | <?= D_SEO ?>" />
 	<meta property="og:url" content="<?= base_url(); ?>" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="<?= NOMBRE_EMPRESA ?> | We offer personalized one-of-a-kind designs, in our bestselling styles, for your business.s" />
-
-	<link rel="shortcut icon" type="image/png" href="<?= media(); ?>/tienda/img/logo-hidden.png" />
-	<link rel="apple-touch-icon" href="<?= media(); ?>/tienda/img/logo-hidden.png" />
+	<meta name="twitter:title" content="<?= NOMBRE_EMPRESA ?> | <?= D_SEO ?>" />
+	<link rel="shortcut icon" type="image/png" href="<?= media(); ?>/tienda/img/logo.png" />
+	<link rel="apple-touch-icon" href="<?= media(); ?>/tienda/img/logo.png" />
 	<link rel="author" type="text/plain" href="humans.txt" />
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
 	<link rel="canonical" href="<?= base_url(); ?>">
-	
 	<!-- /Yoast Seo-->
 
 <!--  Iconos -->
  
 <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="<?= media(); ?>/tienda/css/bootstrap.css.map">
 
 <!-- / Iconos -->
 
@@ -45,43 +42,69 @@
 <link rel="stylesheet" href="<?= media(); ?>/tienda/css/lightbox.min.css">
 <!-- lightbox -->
 
-<link href="<?= media(); ?>/tienda/css/custom.css" rel="stylesheet">
-
+<link href="<?= media(); ?>/tienda/css/style.css" rel="stylesheet">
 </head>
 
 <body onunload="myStopFunction();" >
 
-<div class="container-fluid rosado fuente cabecera">
-	<div class="row">
-		<div class="col-md-4 fatherLogo">
-		 
-			<a href="<?= base_url(); ?>"><img class="imagen" src="<?= media(); ?>/tienda/img/logo-hidden.png" width="245"  alt="<?= NOMBRE_EMPRESA ?>" title="<?= NOMBRE_EMPRESA ?>"></a>
-		</div>
-		<div class="col-md-4">
-			<div class="buscador">
-				<input id="buscador" type="text" placeholder="Buscar"></div>
-		</div>
-		<div class="col-md-4 cart_css">
-			<div class="carrito">
-				<span>Cart</span>
-				<a href="#"><span><i class="fa fa-shopping-cart " aria-hidden="true"></i></span></a>
-			</div>
-		</div>
-	</div>
-</div>
+    <!-- ************************************************************** -->
+    <!-- *************************  cabecera  ************************* -->
+    <!-- ************************************************************** -->
+    <header>
+        <div id="desktop" class="container header">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="<?= base_url(); ?>"><img class="logo" src="<?= media(); ?>/tienda/img/logo.png" alt="<?= NOMBRE_EMPRESA ?>" title="<?= NOMBRE_EMPRESA ?>"></a>
+                </div>
+                <div class="col-md-9">
+                    
+                        <ul class="social">
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51988552844&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="fa fa-whatsapp " aria-hidden="true"></i> (+51) 988 552 844</a></li>
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=51983533384&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"><i class="fa fa-whatsapp " aria-hidden="true"></i> (+51) 983 533 384</a></li>
+                        </ul>
+                    <nav>
+                    <ul class="menu ">
+                        <li><a class="" href="<?= base_url(); ?>">Inicio</a></li>
+                        <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
+                        <li><a href="">Servicios</a></li>
+						<li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
+                        <li><a href="">Internacionales</a></li>
+                        <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
+    
+                    </ul>
+					</nav>
+                   
+                </div>
+               <!--  <div class="col-md-2">
+                    
+                </div> -->
+            </div>
+        </div>
+        <div id="mobile"  class="container-fluid header" >
 
- <!--/header-->
+            <div class="header-mb">
+				<a href="<?= base_url(); ?>"><img class="logo-mb" src="<?= media(); ?>/tienda/img/logo-small-white.png" alt="<?= NOMBRE_EMPRESA ?>" title="<?= NOMBRE_EMPRESA ?>"></a>
+                
 
- <nav class="menu" id="divNavegation">
-
- <a class="toggleMenu" href="<?= base_url(); ?>"><img src="<?= media(); ?>/tienda/img/menu/menu.png" width="40"alt="">Menu</a>
- 	<ul class="nav">
-					<li  class="test"><a href="<?= base_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href="<?= base_url(); ?>/nosotros">Company</a></li>
-					<li><a  class="clsProducto">Shop</a></li>
-					<li><a href="<?= base_url(); ?>/contacto">Contact us</a></li>
-	</ul>
-	<div class="wsp"><a href="https://api.whatsapp.com/send?phone=195138333868&amp;text=Hi%20Can%20I%20have%20more%20information?"><i class="fa fa-whatsapp" aria-hidden="true"></i> +1 (513) 833-3868</a></div>
- </nav>
-
- <!--/header-->
+                <i id="hamburguer" class="fa fa-bars" aria-hidden="true"></i>
+                <i  id="close" class="hidden fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="body-mb">
+				<nav>
+                <ul id="menu-mb" class="hidden">
+                    <li ><a href="">Inicio</a></li>
+                        <li><a href="">Nosotros</a></li>
+                        <li class="active"><a href="">Servicios</a></li>
+                        <li><a href="">Nacionales</a></li>
+                        <li><a href="">Internacionales</a></li>
+                        <li><a href="">CONTACTO</a></li>
+               
+                </ul>
+				</nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ************************************************************** -->
+    <!-- *************************  /cabecera  ************************* -->
+    <!-- ************************************************************** -->

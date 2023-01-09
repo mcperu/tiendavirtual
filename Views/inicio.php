@@ -89,7 +89,7 @@ headerTienda($data);
             <article class="col-md-4">
                 <div class="conProd">
                    <a class="text-d-none" href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"> <img src="<?= $portada ?>" alt="<?= $arrProductos[$p]['nombre'] ?>"  title="Viaja a Tarapoto"></a>
-                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><h3>TARAPOTO</h3></a></div>
+                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><h3><?= $arrProductos[$p]['lugar'] ?></h3></a></div>
                     <div class="conTit"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['ruta']; ?>"><p><?= $arrProductos[$p]['nombre'] ?></p></a></div>
                 </div>
                 <div class="descripcion">
@@ -160,7 +160,7 @@ headerTienda($data);
             <article class="col-md-4">
                 <div class="conProd">
                    <a class="text-d-none" href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"> <img src="<?= $portada ?>" alt="<?= $arrPackInter[$p]['nombre'] ?>"  title="Viaja a Tarapoto"></a>
-                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><h3>TARAPOTO</h3></a></div>
+                    <div class="conSlog"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><h3><?= $arrPackInter[$p]['lugar'] ?></h3></a></div>
                     <div class="conTit"><a class="text-d-none"href="<?= base_url().'/tienda/producto/'.$arrPackInter[$p]['ruta']; ?>"><p><?= $arrPackInter[$p]['nombre'] ?></p></a></div>
                 </div>
                 <div class="descripcion">

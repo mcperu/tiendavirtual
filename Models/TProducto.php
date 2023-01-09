@@ -164,7 +164,7 @@ trait TProducto{
         
         ct.nombre AS nombrecategoriatres,
         ct.ruta,
-        ct.descripcion,
+        ct.descripcion AS descripcionCategoria,
         p.marcaid,
         m.idmarca,
         m.nombre AS marca,
@@ -187,7 +187,9 @@ trait TProducto{
         me_marcas.imagen AS imagenmarca,
         me_pais.imagen AS imagenpais,
         me_marcas.nombre AS nombremarca,
-        me_pais.nombre AS nombrepais 
+        me_pais.nombre AS nombrepais,
+        p.caracteristica,
+        p.lugar
     FROM
         me_productos AS p
         INNER JOIN me_categoriatres AS ct ON p.categoriatresid = ct.idcategoriatres
@@ -249,7 +251,9 @@ trait TProducto{
 					p.stock,
 					p.ruta,
 					p.resumen,
-					p.preciodescuento
+					p.preciodescuento,
+                    p.caracteristica,
+                    p.lugar
 					FROM me_productos p 
 					INNER JOIN me_categoriatres ct ON p.categoriatresid = ct.idcategoriatres
 					INNER JOIN me_marcas m ON p.marcaid = m.idmarca

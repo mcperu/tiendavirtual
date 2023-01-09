@@ -81,10 +81,9 @@ $(document).ready(function(){
   });
 
 
-/*   let url = window.location.href;
+  let url = window.location.href;
  
-	texto = ""
-	texto = "https://api.whatsapp.com/send?phone=195138333868&amp;text=Hi%20Can%20I%20have%20more%20information?"+ url;
+	texto = "https://api.whatsapp.com/send?phone=51988552844&text=Hola%20deseo%20mas%20informaci%C3%B3n:"+ "Pagina: "+ url;
 
 	let destino = document.querySelector("#divWhatsapp");
-	destino.href = texto; */
+	destino.href = texto;

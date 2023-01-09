@@ -20,7 +20,7 @@ class Inicio extends Controllers{
        $data['banner'] = $this->getCategoriaUnoT(CAT_BANNER);
        $data['categoria'] = $this->getCategoriaDosT();
        $data['categoriatres'] = $this->getCategoriaTresT(CATEGORIA_TRES);
-    /*    $data['productos'] = $this->selectProductos(); */
+ 
        $data['productos'] = $this->getProductosCategoriaInicio(1);
        $data['paquetes-internacionales'] = $this->getProductosCategoriaInicio(3);
       

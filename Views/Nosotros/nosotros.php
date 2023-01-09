@@ -6,40 +6,39 @@ $banner = $data['page']['portada'];
 $idpagina = $data['page']['idpost'];
 ?>
 
+    <!-- ************************************************************** -->
+    <!-- *************************  portada  ************************* -->
+    <!-- ************************************************************** -->
+    <section class="banner">
+    <div class="capa">
+        
+        <h1 class="bannerTit">
+        <?php
+        if(viewPage($idpagina)){
+            echo $data['page']['titulo'];
+        }
+        ?>
+        </h1>
+    </div>
+    
+    </section>
+    <!-- ************************************************************** -->
+    <!-- *************************  /portada  ************************* -->
+    <!-- ************************************************************** -->
+
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li><a href="<?= base_url(); ?>">Inicio</a></li> / 
+            <li class="active"><strong> <?php
+            if(viewPage($idpagina)){
+                echo $data['page']['titulo'];
+            } ?> </strong></li>
+        </ul>
+    </div>
+
         <div class="container">
                 <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                            <div class="row">
-
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        
-            <div class="breadcrumbs" style="
-            background-image: url(&quot;img/breadcrumbs.png&quot;);
-            height: 33px; 
-            padding-top: 9px;
-        ">
-                <div class="container">
-                    <!-- Breadcrumb NavXT 5.4.0 -->
-        <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Parihuelas" href="<?= base_url(); ?>" class="home">
-        <span property="name"> Inicio </span></a><meta property="position" content="1"></span>
-        <span property="itemListElement" typeof="ListItem"><span property="name" style="
-            margin-left: 30px;
-        "><?= $data['page']['titulo'] ?></span>
-        <meta property="position" content="2"></span>		</div>
-            </div>
-
-                            </div>
-                            
-                            
-                            
-                            </div>
-
-        <div class="espacio">
-        </div>	 	      
-
-                          
-
                             <?php
 	if(viewPage($idpagina)){
 		echo $data['page']['contenido'];

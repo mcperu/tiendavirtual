@@ -65,6 +65,7 @@ const MONEY = "S/ ";
 	const PTERMINOS = 7;
 	const PSUCURSALES = 8;
 	const PERROR = 9;
+	const PNACIONALES = 4;
 
 	//Roles
 	const RADMINISTRADOR = 1;

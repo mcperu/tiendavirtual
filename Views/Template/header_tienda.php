@@ -63,12 +63,12 @@
                         </ul>
                     <nav>
                     <ul class="menu ">
-                        <li><a class="active" href="">Inicio</a></li>
-                        <li><a href="">Nosotros</a></li>
+                        <li><a class="active" href="<?= base_url(); ?>">Inicio</a></li>
+                        <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
                         <li><a href="">Servicios</a></li>
-                        <li><a href="">Nacionales</a></li>
+                        <li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
                         <li><a href="">Internacionales</a></li>
-                        <li><a href="">Contacto</a></li>
+                        <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
     
                     </ul>
 					</nav>
