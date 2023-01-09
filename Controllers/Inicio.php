@@ -23,6 +23,7 @@ class Inicio extends Controllers{
  
        $data['productos'] = $this->getProductosCategoriaInicio(1);
        $data['paquetes-internacionales'] = $this->getProductosCategoriaInicio(3);
+       $data['sliders'] = $this->selectSliders();
       
        $this->views->getView($this,"inicio",$data);
     }

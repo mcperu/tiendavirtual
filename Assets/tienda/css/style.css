@@ -816,7 +816,13 @@ section.banner {
           display: block;
           margin: 0 auto;
       }
-    
+      .btnCenter {
+        text-align: center !important;
+        display: block;
+        margin: 5% auto;
+        width: 80%;
+        padding: 10px 15px;
+    }
 @media only screen and (max-width: 768px) {
     #mobile {
         background: #47A895;

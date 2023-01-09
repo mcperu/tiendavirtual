@@ -9,7 +9,8 @@ $arrCate = $data['categoria'];
 $arrCateTres = $data['categoriatres'];
 $arrProductos = $data['productos'];
 //dep($arrProductos);
-
+$arrSliders = $data['sliders'];
+//dep($arrSliders);
 $arrPackInter = $data['paquetes-internacionales'];
 // dep($arrPackInter);
 headerTienda($data); 
@@ -19,43 +20,69 @@ headerTienda($data);
 <!-- ************************************************************** -->
     <!-- *************************  portada  ************************* -->
     <!-- ************************************************************** -->
+    <?php
+	$slides='';
+	$Indicators='';
+	$counter=0;
+    ?>
+
+  <?php
+
+  for($s=0; $s < count($arrSliders); $s++){
+
+    $nombre = $arrSliders[$s]['nombre'];
+    $titulo = $arrSliders[$s]['titulo'];
+    $imagen = $arrSliders[$s]['imagen'];
+    $boton = $arrSliders[$s]['boton'];
+  
+    if($counter == 0)
+    {
+      $Indicators .='<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="'.$counter.'" class="active" aria-current="true" aria-label="'.$titulo.'"></button>';
+      $slides .= '<div class="carousel-item active" data-bs-interval="2000">
+      <img src="'. media().'/tienda/img/'.$imagen.'" class="d-block w-100" alt="'.$titulo.'" title="'.$titulo.'">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="tituloSlide">'.$titulo.'</h2>
+          <a class="btn btn-warning" href="'.$boton.'"><b>VER PAQUETES</b></a>
+        </div>
+      </div>';
+    }
+    else
+    {
+      $Indicators .='<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="'.$counter.'"  aria-current="true" aria-label="'.$titulo.'"></button>';
+      $slides .= '<div class="carousel-item" data-bs-interval="2000">
+      <img src="'. media().'/tienda/img/'.$imagen.'" class="d-block w-100" alt="'.$titulo.'" title="'.$titulo.'">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="tituloSlide">'.$titulo.'</h2>
+          <a class="btn btn-warning" href="'.$boton.'"><b>VER PAQUETES</b></a>
+        </div>
+      </div>';
+    }
+
+    
+    $counter++;
+
+  }
+
+  ?>
+
+
+
+
     <div id="slider" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <?= $Indicators; ?>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img src="<?= media(); ?>/tienda/img/slide1.jpg" class="d-block w-100" alt="Peru Turismo - Proyajkon">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="tituloSlide">Peru Turismo - Proyajkon</h2>
-              <a class="btn btn-warning" href="#"><b>VER PAQUETES</b></a>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="<?= media(); ?>/tienda/img/slide2.jpg" class="d-block w-100" alt="Turismo en peru - Proyajkon">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="tituloSlide">Turismo en peru - Proyajkon</h2>
-              <a class="btn btn-warning" href="#"><b>VER PAQUETES</b></a>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="<?= media(); ?>/tienda/img/slide3.jpg" class="d-block w-100" alt="Viajes a peru - Proyajkon">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="tituloSlide">Viajes a peru - Proyajkon</h2>
-              <a class="btn btn-warning" href="#"><b>VER PAQUETES</b></a>
-            </div>
-          </div>
+        <?= $slides; ?>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+<!--         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </button> -->
       </div>
     <!-- ************************************************************** -->
     <!-- *************************  /portada  ************************* -->
@@ -132,6 +159,8 @@ headerTienda($data);
         <div class="dI2right"></div>
     </div>
 </section>
+
+<a id="divWhatsapp" class="btn btn-success text-white btnCenter" ><i class="fa fa-whatsapp " aria-hidden="true"></i> Deseo reservar ahora!</a>
 	<!-- ************************************************************** -->
     <!-- *************************  paquetes turisticos Internacionales  ************************* -->
     <!-- ************************************************************** -->    

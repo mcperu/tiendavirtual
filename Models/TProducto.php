@@ -281,6 +281,24 @@ trait TProducto{
                     //dep($request); exit();
 				return $request;
 			}
+
+
+                
+    public function selectSliders()
+    {
+        $this->con2 = new Mysql();
+        $sql = "SELECT idslider, nombre, titulo, imagen, boton, status FROM slider WHERE status <> 0;";
+        $request = $this->con2->select_all($sql);
+
+        return $request;
+    }
+
+
+
+
+
+
 }
+
 
 ?>
