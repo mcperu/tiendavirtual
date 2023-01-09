@@ -1,17 +1,28 @@
-<?php
-class Servicios extends Controllers{
-    public function __construct(){
-        parent::__construct();
-    }
 
-    public function servicios(){
-       // echo "mensaje desde el controlador";
-       $data['page_tag'] = "Servicios";
-       $data['page_title'] = "MasterDent | Servicios en Odontología General y Especializada - Servicios";
-       $data['page_name'] = "servicios";
-       $data['page_content'] = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi rerum debitis reiciendis qui fugiat corrupti beatae neque repellendus enim! Aliquam quos consequuntur cupiditate culpa animi dicta beatae delectus magni.";
-       $this->views->getView($this,"servicios",$data);
-    }
 
-}
-?>
+<?php 
+	class Servicios extends Controllers{
+		public function __construct()
+		{
+			session_start();
+			/* getPermisos(MODPAGINAS); */
+			parent::__construct();
+		}
+
+		public function servicios()
+		{
+			$pageContent = getPageRout('servicios');
+			if(empty($pageContent)){
+				header("Location: ".base_url());
+			}else{
+				$data['page_tag'] = NOMBRE_EMPRESA;
+				$data['page_title'] = NOMBRE_EMPRESA." - ".$pageContent['titulo'];
+				$data['page_name'] = $pageContent['titulo'];
+				$data['page'] = $pageContent;
+				$this->views->getView($this,"servicios",$data);  
+			}
+
+		}
+
+	}
+ ?>

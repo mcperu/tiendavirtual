@@ -8,21 +8,17 @@
 		
         <h3>Paquetes Turisticos</h3>
         <ul class="links">
-            <li><a href="#">Copacabana</a></li>
-            <li><a href="#">Churin</a></li>
-            <li><a href="#">Tarapoto</a></li>
-
+			<li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
+			<li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
         </ul>
 		<a href="<?= base_url(); ?>"><img src="<?= media(); ?>/tienda/img/logo-small-white.png"  alt="Proyajkon" title="Proyajkon"></a>
 		</div>
 		<div class="box1">
 			<h3>Proyajkon</h3>
 			<ul class="links">
-				<li><a href="#">Nosotros</a></li>
-				<li><a href="#">Misión</a></li>
-				<li><a href="#">Visión</a></li>
-				<li><a href="#">Contacto</a></li>
- 
+			<li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
+			<li><a href="<?= base_url(); ?>/servicios">Servicios</a></li>
+            <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
 			</ul>
 		</div>
 		<div class="box1">
@@ -31,7 +27,7 @@
 				<li><a >Av. Tacna N° 407, Int. 504, Lima.</a></li>
 				<li><a target="_blank" href="https://api.whatsapp.com/send?phone=51988552844&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"> +51 988 552 844</a></li>
 				<li><a target="_blank" href="https://api.whatsapp.com/send?phone=51983533384&text=Hola%20Proyajkon,%20deseo%20mas%20informaci%C3%B3n%20mi%20nombre%20es:"> +51 983 533 384</a></li>
-				<li><a href="mailto:info@arapaimaexpeditions.com"> info@arapaimaexpeditions.com</a></li>
+				<li><a href="mailto:info@arapaimaexpeditions.com"> info@proyajkon.com</a></li>
 				<li><a href="tel:5113143040">(+51) 1 314 3040</a></li>
 			 
 			</ul>
