@@ -67,7 +67,7 @@
                         <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
                         <li><a href="">Servicios</a></li>
                         <li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
-                        <li><a href="">Internacionales</a></li>
+                        <li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
                         <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
     
                     </ul>

@@ -30,7 +30,7 @@ const MONEY = "S/ ";
 
 	//SEO
 
-	const T_SEO = "&#8211; Turismo, ofertas de viaje y tours por el Perú ";
+	const T_SEO = "Turismo, ofertas de viaje y tours por el Perú ";
 	const D_SEO = "Proyajkon Paquetes Turisticos en Perú, viajes a todo el Perú, Tour en Lima";
 
 

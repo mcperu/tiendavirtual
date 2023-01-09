@@ -68,11 +68,11 @@ headerDetalle($data);
                         <li><a target="_blank" href="https://youtube.com"><i class="fa fa-youtube " aria-hidden="true"></i></a></li>
                         
                     </ul>
-                    <ul class="dats">
+                   <!--  <ul class="dats">
                       <li class="c-tel"><strong>Phone</strong><br><a href="tel:<?= PAIS.CODIGO.CELULAR1 ?>"><?= PAIS.' '.CODIGO.' '. CELULAR1 ?></a>  
                       </li>
                       <li class="c-mail">Email<br><a href="mailto:<?= EMAIL ?>"><?= EMAIL ?></a></li>
-                    </ul>
+                    </ul> -->
                    
                 </div>
             </div>
