@@ -35,7 +35,13 @@
                       <label class="control-label">Boton</label>
                       <input class="form-control" id="txtBoton" name="txtBoton" type="text" required="">
                     </div>
-                    
+                    <div class="form-group ">
+                            <label for="listStatus">Estado <span class="required">*</span></label>
+                            <select class="form-control selectpicker" id="listStatus" name="listStatus" required="">
+                              <option value="1">Activo</option>
+                              <option value="2">Inactivo</option>
+                            </select>
+                        </div>
                 </div>
                 <div class="col-md-4 ">
                    
@@ -60,7 +66,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="modalViewSlider" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="modalViewSliders" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-xl" >
     <div class="modal-content">
       <div class="modal-header header-primary">

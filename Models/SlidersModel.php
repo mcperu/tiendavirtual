@@ -133,14 +133,14 @@
 	        return $request_delete;
 		}
 
-		public function deleteProducto(int $idproducto){
-			$this->intIdProducto = $idproducto;
-			$sql = "UPDATE me_productos SET status = ? WHERE idproducto = $this->intIdProducto ";
+		 */
+
+		public function deleteSlider(int $idslider){
+			$this->intIdSlider = $idslider;
+			$sql = "UPDATE slider SET status = ? WHERE idslider = $this->intIdSlider ";
 			$arrData = array(0);
 			$request = $this->update($sql,$arrData);
 			return $request;
-		} */
-
-		
+		}
 	}
  ?>

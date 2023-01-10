@@ -185,12 +185,12 @@
 			if($_POST){
 				if($_SESSION['permisosMod']['d']){
 					$intIdslider = intval($_POST['idSlider']);
-					$requestDelete = $this->model->deleteProducto($intIdslider);
+					$requestDelete = $this->model->deleteSlider($intIdslider);
 					if($requestDelete)
 					{
-						$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado el producto');
+						$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado el item');
 					}else{
-						$arrResponse = array('status' => false, 'msg' => 'Error al eliminar el producto.');
+						$arrResponse = array('status' => false, 'msg' => 'Error al eliminar el item.');
 					}
 					echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
 				}

@@ -72,6 +72,7 @@ tableSliders = $('#tableSliders').dataTable( {
     "order":[[0,"desc"]]  
 });
 window.addEventListener('load', function() {
+
     if(document.querySelector("#formProductos")){
         let formProductos = document.querySelector("#formProductos");
         formProductos.onsubmit = function(e) {
@@ -276,7 +277,7 @@ function fntViewInfo(idSlider){
     let request = (window.XMLHttpRequest) ? 
                     new XMLHttpRequest() : 
                     new ActiveXObject('Microsoft.XMLHTTP');
-    let ajaxUrl = base_url+'/Slider/getSlider/'+idSlider;
+    let ajaxUrl = base_url+'/Sliders/getSlider/'+idSlider;
     request.open("GET",ajaxUrl,true);
     request.send();
     request.onreadystatechange = function(){
@@ -306,7 +307,7 @@ function fntViewInfo(idSlider){
                     }
                 } */
              /*    document.querySelector("#celFotos").innerHTML = htmlImage; */
-                $('#modalViewProducto').modal('show');
+                $('#modalViewSliders').modal('show');
 
             }else{
                 swal("Error", objData.msg , "error");
@@ -324,18 +325,20 @@ function fntEditInfo(element,idSlider){
     let request = (window.XMLHttpRequest) ? 
                     new XMLHttpRequest() : 
                     new ActiveXObject('Microsoft.XMLHTTP');
-    let ajaxUrl = base_url+'/Slider/getSlider/'+idSlider;
+    let ajaxUrl = base_url+'/Sliders/getSlider/'+idSlider;
     request.open("GET",ajaxUrl,true);
     request.send();
     request.onreadystatechange = function(){
+        
         if(request.readyState == 4 && request.status == 200){
             let objData = JSON.parse(request.responseText);
-            console.log(request.responseText);
+           /*  console.log(request.responseText);
+           return; */
             if(objData.status)
             {
                 let htmlImage = "";
                 let objSlider = objData.data;
-                document.querySelector("#idSlider").value = objSlider.idSlider;
+                document.querySelector("#idSlider").value = objSlider.idslider;
                 document.querySelector("#txtNombre").value = objSlider.nombre;
                 document.querySelector("#txtTitulo").value = objSlider.titulo;
                 document.querySelector("#txtImagen").value = objSlider.imagen;
@@ -343,10 +346,7 @@ function fntEditInfo(element,idSlider){
                 
                 document.querySelector("#listStatus").value = objSlider.status;
 
-                tinymce.activeEditor.setContent(objSlider.descripcion); 
-
-                      
-                $('#modalFormProductos').modal('show');
+                $('#modalFormSliders').modal('show');
             }else{
                 swal("Error", objData.msg , "error");
             }
@@ -369,7 +369,7 @@ function fntDelInfo(idSlider){
         if (isConfirm) 
         {
             let request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            let ajaxUrl = base_url+'/Slider/delSlider';
+            let ajaxUrl = base_url+'/Sliders/delSlider';
             let strData = "idSlider="+idSlider;
             request.open("POST",ajaxUrl,true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -380,7 +380,7 @@ function fntDelInfo(idSlider){
                     if(objData.status)
                     {
                         swal("Eliminar!", objData.msg , "success");
-                        tabelSliders.api().ajax.reload();
+                        tableSliders.api().ajax.reload();
                     }else{
                         swal("Atención!", objData.msg , "error");
                     }
