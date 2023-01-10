@@ -70,7 +70,6 @@
 						<li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
                         <li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
                         <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
-    
                     </ul>
 					</nav>
                    
@@ -91,15 +90,14 @@
             </div>
             <div class="body-mb">
 				<nav>
-                <ul id="menu-mb" class="hidden">
-                    <li ><a href="">Inicio</a></li>
-                        <li><a href="">Nosotros</a></li>
-                        <li class="active"><a href="">Servicios</a></li>
-                        <li><a href="">Nacionales</a></li>
-                        <li><a href="">Internacionales</a></li>
-                        <li><a href="">CONTACTO</a></li>
-               
-                </ul>
+                    <ul id="menu-mb" class="hidden">
+                        <li class="active" ><a href="<?= base_url(); ?>">Inicio</a></li>
+                        <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
+                        <li><a href="<?= base_url(); ?>/servicios">Servicios</a></li>
+                        <li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
+                        <li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
+                        <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
+                    </ul>
 				</nav>
             </div>
         </div>

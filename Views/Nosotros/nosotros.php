@@ -54,6 +54,7 @@ $idpagina = $data['page']['idpost'];
 	}
 
 ?>
+<a id="divWhatsapp" class="btn btn-success text-white btnCenter" ><i class="fa fa-whatsapp " aria-hidden="true"></i> Deseo reservar ahora!</a>
 
                         </div>
 
