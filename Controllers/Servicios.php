@@ -19,6 +19,8 @@
 				$data['page_title'] = NOMBRE_EMPRESA." - ".$pageContent['titulo'];
 				$data['page_name'] = $pageContent['titulo'];
 				$data['page'] = $pageContent;
+				$data['menu_active'] = "servicios_active";
+				$data['page_functions_js'] = "functions_servicios.js";
 				$this->views->getView($this,"servicios",$data);  
 			}
 

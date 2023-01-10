@@ -45,8 +45,10 @@ class Tienda extends Controllers{
 				$data['page_title'] = $producto;
 				$data['page_name'] = "producto";
 				$data['producto'] = $this->getProductoT($producto);
+                $data['menu_active'] = "producto_active";
+                $data['page_functions_js'] = "functions_detalle_producto.js";
+
 				$this->views->getView($this,"producto",$data);
-                $data['page_functions_js'] = "functions_productos_tienda.js";
         }
     }
 

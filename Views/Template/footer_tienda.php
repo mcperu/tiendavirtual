@@ -67,18 +67,6 @@
 <script src="<?= media(); ?>/tienda/js/lightbox-plus-jquery.min.js"></script>
 <script src="<?= media(); ?>/tienda/js/jquery.min.1.9.1.js"></script>
 
-<script type="text/javascript">
-
-$(document).ready(function() {
-
-})
-
-
-
-
-
-
-</script>
 <script src="<?= media(); ?>/tienda/js/jquery-3.3.1.min.js"></script>
 <script src="<?= media(); ?>/tienda/js/jquery.min.js"></script>
 
@@ -89,12 +77,13 @@ $(document).ready(function() {
 <script src="<?= media(); ?>/tienda/js/validacionFormulario.js"></script>
 
 
+
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
 
   <script src="https://kit.fontawesome.com/e2ce590873.js" crossorigin="anonymous"></script>
  
-
+  <script src="<?= media(); ?>/tienda/js/<?= $data['page_functions_js']; ?>"></script>
 </body>
 </html>

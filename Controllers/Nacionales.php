@@ -23,7 +23,8 @@ require_once("Models/TProducto.php");
 
 				$data['page_title'] = NOMBRE_EMPRESA." - ". $data['paquetes-nacionales'][0]['nombrecategoriatres'];
 				$data['page_name'] = "Nacionales";
-			 
+				$data['menu_active'] = "nacionales_active";
+				$data['page_functions_js'] = "functions_nacionales.js";
 				$this->views->getView($this,"nacionales",$data);  
 			/* } */
 		}

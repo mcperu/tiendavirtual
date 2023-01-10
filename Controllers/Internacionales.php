@@ -20,7 +20,8 @@ require_once("Models/TProducto.php");
 
 				$data['page_title'] = NOMBRE_EMPRESA." - ". $data['paquetes-internacionales'][0]['nombrecategoriatres'];
 				$data['page_name'] = "Internacionales";
-			 
+				$data['menu_active'] = "internacionales_active";
+				$data['page_functions_js'] = "functions_internacionales.js";
 				$this->views->getView($this,"internacionales",$data);  
 			
 		}

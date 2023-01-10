@@ -1,3 +1,6 @@
+<?php
+$active=$data['menu_active'];
+?>
 <!DOCTYPE html>
 <html lang="es-ES">
  <head>
@@ -64,12 +67,12 @@
                         </ul>
                     <nav>
                     <ul class="menu ">
-                        <li><a class="" href="<?= base_url(); ?>">Inicio</a></li>
-                        <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
-                        <li><a href="<?= base_url(); ?>/servicios">Servicios</a></li>
-						<li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
-                        <li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
-                        <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
+                        <li><a class="<?= $active == "inicio_active" ? "active" : ""; ?>" href="<?= base_url(); ?>">Inicio</a></li>
+                        <li><a class="<?= $active == "nosotros_active" ? "active" : ""; ?>" href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
+                        <li><a class="<?= $active == "servicios_active" ? "active" : ""; ?>" href="<?= base_url(); ?>/servicios">Servicios</a></li>
+						<li><a class="<?= $active == "nacionales_active" ? "active" : ""; ?>" href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
+                        <li><a class="<?= $active == "internacionales_active" ? "active" : ""; ?>" href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
+                        <li><a class="<?= $active == "contacto_active" ? "active" : ""; ?>" href="<?= base_url(); ?>/contacto">Contacto</a></li>
                     </ul>
 					</nav>
                    
@@ -91,12 +94,12 @@
             <div class="body-mb">
 				<nav>
                     <ul id="menu-mb" class="hidden">
-                        <li class="active" ><a href="<?= base_url(); ?>">Inicio</a></li>
-                        <li><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
-                        <li><a href="<?= base_url(); ?>/servicios">Servicios</a></li>
-                        <li><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
-                        <li><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
-                        <li><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
+                        <li class="<?= $active == "inicio_active" ? "active" : ""; ?>" ><a href="<?= base_url(); ?>">Inicio</a></li>
+                        <li class="<?= $active == "nosotros_active" ? "active" : ""; ?>"><a href="<?= base_url(); ?>/nosotros">Nosotros</a></li>
+                        <li class="<?= $active == "servicios_active" ? "active" : ""; ?>"><a href="<?= base_url(); ?>/servicios">Servicios</a></li>
+                        <li class="<?= $active == "nacionales_active" ? "active" : ""; ?>"><a href="<?= base_url(); ?>/nacionales">Nacionales</a></li>
+                        <li class="<?= $active == "internacionales_active" ? "active" : ""; ?>"><a href="<?= base_url(); ?>/internacionales">Internacionales</a></li>
+                        <li class="<?= $active == "contacto_active" ? "active" : ""; ?>"><a href="<?= base_url(); ?>/contacto">Contacto</a></li>
                     </ul>
 				</nav>
             </div>

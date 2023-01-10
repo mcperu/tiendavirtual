@@ -65,8 +65,11 @@
 <script src="<?= media(); ?>/tienda/js/jquery-3.3.1.min.js"></script>
 <script src="<?= media(); ?>/tienda/js/jquery.min.js"></script>
 
+<script src="<?= media(); ?>/tienda/js/general.js"></script>
+<script src="<?= media(); ?>/tienda/js/script.js"></script>
+
 <script src="<?= media(); ?>/tienda/js/bootstrap.min.js"></script>
 <script src="<?= media(); ?>/tienda/js/validacionFormulario.js"></script>
-
+<script src="<?= media(); ?>/tienda/js/<?= $data['page_functions_js']; ?>"></script>
 </body>
 </html>
